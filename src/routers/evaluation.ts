@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import EvaluationsController from './../controllers/evaluations'
+import EvaluationService from '../services/evaluation'
 
 class EvaluationsRouter {
   private readonly _router = Router()
-  private readonly _controller = EvaluationsController
+  private readonly _service = EvaluationService
 
   constructor () {
     this._configure()
@@ -16,7 +16,7 @@ class EvaluationsRouter {
   private _configure (): void {
     this._router.get('', (req, res, next) => {
       try {
-        const result = this._controller.evaluationsMethod()
+        const result = this._service.evaluationsMethod()
         res.status(200).json(result)
       } catch (error) {
         next(error)

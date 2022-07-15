@@ -1,13 +1,13 @@
 import { Router } from 'express'
-import UsersRouter from './users'
-import CommentsRouter from './comments'
-import EvaluationsRouter from './evaluations'
+import UserRouter from './user'
+import CommentRouter from './comment'
+import EvaluationRouter from './evaluation'
 
 class RouteTable {
   private readonly _router = Router()
-  private readonly _users = UsersRouter
-  private readonly _comments = CommentsRouter
-  private readonly _evaluations = EvaluationsRouter
+  private readonly _user = UserRouter
+  private readonly _comment = CommentRouter
+  private readonly _evaluation = EvaluationRouter
 
   constructor () {
     this._configure()
@@ -18,9 +18,9 @@ class RouteTable {
   }
 
   private _configure (): void {
-    this._router.use('/users', this._users)
-    this._router.use('/comments', this._comments)
-    this._router.use('/evaluations', this._evaluations)
+    this._router.use('/user', this._user)
+    this._router.use('/comment', this._comment)
+    this._router.use('/evaluation', this._evaluation)
   }
 }
 

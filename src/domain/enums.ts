@@ -1,0 +1,7 @@
+export enum Subject {
+  MATHS = 'MATHS',
+  SPANISH = 'SPANISH',
+  SCIENCE = 'SCIENCE',
+  PHYSICS = 'PHYSICS',
+  CHEMISTRY = 'CHEMISTRY'
+}
