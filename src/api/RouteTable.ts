@@ -1,7 +1,7 @@
 import { Router } from 'express'
-import UserRouter from './user'
-import CommentRouter from './comment'
-import EvaluationRouter from './evaluation'
+import UserRouter from './routers/user'
+import CommentRouter from './routers/comment'
+import EvaluationRouter from './routers/evaluation'
 
 class RouteTable {
   private readonly _router = Router()

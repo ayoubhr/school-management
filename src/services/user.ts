@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/dot-notation */
 /* eslint-disable array-callback-return */
 import { Student } from '../domain/types'
-import { StudentModel } from './../domain/models/schemas'
+import { StudentModel } from '../domain/models/models'
 
 class UserService {
   usersMethod (): string {
@@ -10,9 +10,6 @@ class UserService {
 
   createStudent (body: Student): string {
     const { dni, name, surname, postalCode, city, bornDate, course, studentSubjects, code } = body
-    console.log(dni)
-    console.log(studentSubjects)
-    console.log(body)
     const model = new StudentModel({
       dni: dni,
       name: name,

@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import mongoose from 'mongoose'
-import { IPersona } from '../interfaces'
 import { Student, Teacher } from '../types'
-
-// const student: Student = {}
 
 const studentSchema = new mongoose.Schema({
   dni: { type: String },
@@ -19,16 +16,14 @@ const studentSchema = new mongoose.Schema({
 
 export const StudentModel = mongoose.model<Student>('Students', studentSchema)
 
-/* const teacher: Teacher = {
-  dni: '',
-  name: '',
-  surname: '',
-  postalCode: '',
-  city: '',
-  bornDate: '',
-  teacherSubjects: []
-}
+const teacherSchema = new mongoose.Schema({
+  dni: { type: String },
+  name: { type: String },
+  surname: { type: String },
+  postalCode: { type: String },
+  city: { type: String },
+  bornDate: { type: String },
+  teacherSubjects: { type: [String] }
+}, { versionKey: false })
 
-const teacherSchema = new mongoose.Schema(teacher, { versionKey: false })
-
-export const TeacherModel = mongoose.model('Teachers', teacherSchema) */
+export const TeacherModel = mongoose.model<Teacher>('Teachers', teacherSchema)

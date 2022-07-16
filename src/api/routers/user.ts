@@ -1,8 +1,7 @@
 /* eslint-disable no-trailing-spaces */
 
-// import bodyParser from 'body-parser'
 import { Router } from 'express'
-import UserService from '../services/user'
+import UserService from '../../services/user'
 
 class UsersRouter {
   private readonly _router = Router()
@@ -26,14 +25,11 @@ class UsersRouter {
       }
     })
 
-    // const jsonParser = bodyParser.json()
     this._router.post('/createStudent', (req, res, next) => {
       let result = {}
       try {
-        console.log(req.body)
-        
+        // console.log(req.body)
         result = this._service.createStudent(req.body)
-
         res.status(200).json({ message: result })
       } catch (error) {
         next(error)

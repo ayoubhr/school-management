@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import CommentService from '../services/comment'
+import EvaluationService from '../../services/evaluation'
 
-class CommentsRouter {
+class EvaluationsRouter {
   private readonly _router = Router()
-  private readonly _service = CommentService
+  private readonly _service = EvaluationService
 
   constructor () {
     this._configure()
@@ -16,7 +16,7 @@ class CommentsRouter {
   private _configure (): void {
     this._router.get('', (req, res, next) => {
       try {
-        const result = this._service.commentsMethod()
+        const result = this._service.evaluationsMethod()
         res.status(200).json(result)
       } catch (error) {
         next(error)
@@ -25,4 +25,4 @@ class CommentsRouter {
   }
 }
 
-export = new CommentsRouter().router
+export = new EvaluationsRouter().router
