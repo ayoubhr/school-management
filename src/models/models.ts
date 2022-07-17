@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import mongoose from 'mongoose'
-import { Student, Teacher } from '../types'
+import { Student, Teacher } from '../domain/types'
 
 const studentSchema = new mongoose.Schema({
   dni: { type: String },
@@ -10,7 +10,7 @@ const studentSchema = new mongoose.Schema({
   city: { type: String },
   bornDate: { type: String },
   course: { type: String },
-  studentSubjects: { type: [String] },
+  studentSubjects: { type: {} },
   code: { type: String }
 }, { versionKey: false })
 

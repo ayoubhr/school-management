@@ -3,7 +3,7 @@ import config from '../../config/config'
 import RouteTable from '../api/RouteTable'
 import db from './connection'
 import bodyParser from 'body-parser'
-import ExceptionHandler from '../exceptions/ExceptionHandler'
+import ExceptionHandler from '../exceptions/exceptionHandler'
 
 class Server {
   public app = express()

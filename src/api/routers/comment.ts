@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import CommentService from '../../services/comment'
+import CommentService from '../../services/comment-service'
 
 class CommentsRouter {
   private readonly _router = Router()

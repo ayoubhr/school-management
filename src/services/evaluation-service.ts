@@ -1,4 +1,4 @@
-import ExceptionHandler from '../exceptions/ExceptionHandler'
+import ExceptionHandler from '../exceptions/exceptionHandler'
 
 class EvaluationService {
   evaluationsMethod (): string {

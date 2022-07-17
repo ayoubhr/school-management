@@ -1,7 +1,7 @@
 /* eslint-disable no-trailing-spaces */
 
 import { Router } from 'express'
-import UserService from '../../services/user'
+import UserService from '../../services/user-service'
 
 class UsersRouter {
   private readonly _router = Router()
@@ -26,7 +26,7 @@ class UsersRouter {
     })
 
     this._router.post('/createStudent', (req, res, next) => {
-      let result = {}
+      let result
       try {
         // console.log(req.body)
         result = this._service.createStudent(req.body)

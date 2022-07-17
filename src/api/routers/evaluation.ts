@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import EvaluationService from '../../services/evaluation'
+import EvaluationService from '../../services/evaluation-service'
 
 class EvaluationsRouter {
   private readonly _router = Router()
